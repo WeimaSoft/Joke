@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Joke</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="app_name">乐翻天</string>
+    <string name="btn_index_label">首页</string>
+    <string name="btn_category_label">分类设置</string>
+    <string name="btn_settings_label">我的爱好</string>
 
 </resources>

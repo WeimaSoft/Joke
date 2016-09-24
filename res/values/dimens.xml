@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="height_navigator_layout">60dp</dimen>
+    <dimen name="height_navigator_layout_image">20dp</dimen>
+    <dimen name="height_navigator_layout_button">40dp</dimen>
+    <dimen name="fontsize_navigator_layout_button">12sp</dimen>
+</resources>
