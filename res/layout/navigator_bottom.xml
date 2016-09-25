@@ -13,6 +13,7 @@
         <RadioButton
             android:id="@+id/rdoHome"
             style="@style/style_navigator_radiobutton"
+            android:checked="true"
             android:drawableTop="@drawable/navigator_statechange_home"
             android:text="@string/label_text_navigator_rdohome" />
 
