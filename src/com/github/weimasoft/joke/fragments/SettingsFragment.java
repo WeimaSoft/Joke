@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 public class SettingsFragment extends BaseFragment {
 
 	public SettingsFragment() {
-		super(MainActivity.SETTINGS_FRAGMENT_INDEX, R.layout.fragment_settings, R.id.btn_settings);
+		super(MainActivity.SETTINGS_FRAGMENT_INDEX, R.layout.fragment_settings, 0);
 	}
 	
 }

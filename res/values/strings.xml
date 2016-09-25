@@ -2,8 +2,8 @@
 <resources>
 
     <string name="app_name">乐翻天</string>
-    <string name="btn_index_label">首页</string>
-    <string name="btn_category_label">分类设置</string>
-    <string name="btn_settings_label">我的爱好</string>
+    <string name="label_text_navigator_rdohome">首页</string>
+    <string name="label_text_navigator_rdocategory">分类设置</string>
+    <string name="label_text_navigator_rdosettings">我的爱好</string>
 
 </resources>
