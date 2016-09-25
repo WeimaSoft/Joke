@@ -11,7 +11,7 @@
         <item name="android:gravity">center</item>
         <item name="android:button">@null</item>
         <item name="android:layout_gravity">bottom</item>
-        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@drawable/navigator_text_color</item>
     </style>
 
 </resources>
