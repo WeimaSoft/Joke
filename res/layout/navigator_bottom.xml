@@ -7,34 +7,26 @@
     <RadioGroup
         android:id="@+id/rdogrp_navigator"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
 
         <RadioButton
             android:id="@+id/rdoHome"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:button="@null"
-            android:drawableTop="@drawable/home"
+            style="@style/style_navigator_radiobutton"
+            android:drawableTop="@drawable/user"
             android:text="@string/label_text_navigator_rdohome" />
-        
+
         <RadioButton
             android:id="@+id/rdoCategory"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:button="@null"
-            android:drawableTop="@drawable/category" 
-            android:text="@string/label_text_navigator_rdocategory"/>
-        
-         <RadioButton
+            style="@style/style_navigator_radiobutton"
+            android:drawableTop="@drawable/user"
+            android:text="@string/label_text_navigator_rdocategory" />
+
+        <RadioButton
             android:id="@+id/rdoSettings"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:button="@null"
-            android:drawableTop="@drawable/user" 
-            android:text="@string/label_text_navigator_rdosettings"/>
+            style="@style/style_navigator_radiobutton"
+            android:drawableTop="@drawable/user"
+            android:text="@string/label_text_navigator_rdosettings" />
     </RadioGroup>
 
 </LinearLayout>

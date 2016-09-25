@@ -12,6 +12,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.RadioButton;
 
 public class BaseFragment extends Fragment {
 	private int _fragmentIndex;
@@ -40,13 +43,15 @@ public class BaseFragment extends Fragment {
 	private void initialize() {
 		_parentActivity = (MainActivity) getActivity();
 		
-		Button button = (Button) _parentActivity.findViewById(_buttonId);
+		RadioButton button = (RadioButton) _parentActivity.findViewById(_buttonId);
 		
-		button.setOnClickListener(new OnClickListener() {
-
+		button.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+			
 			@Override
-			public void onClick(View v) {
-				_parentActivity.setCurrentItemIndex(_fragmentIndex);
+			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+				if (isChecked) {
+					_parentActivity.setCurrentItemIndex(_fragmentIndex);
+				}
 			}
 		});
 	}

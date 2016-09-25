@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 public class HomeFragment extends BaseFragment {
 
 	public HomeFragment() {
-		super(MainActivity.HOME_FRAGMENT_INDEX, R.layout.fragment_home, 0);
+		super(MainActivity.HOME_FRAGMENT_INDEX, R.layout.fragment_home, R.id.rdoHome);
 	}
 	
 }
