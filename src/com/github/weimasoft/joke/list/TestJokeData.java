@@ -8,7 +8,7 @@ import android.content.res.Resources;
 
 public class TestJokeData {
 
-	public static List<JokeCategory> getTestData(Resources res) {
+	public static List<JokeCategory> getTestData() {
 		List<JokeCategory> allItems = new ArrayList<JokeCategory>();
 
 		JokeCategory categoryItem = new JokeCategory("经典笑话");
@@ -25,13 +25,25 @@ public class TestJokeData {
 
 		for (int i = 0; i < 6; i++) {
 			if (i % 2 == 0) {
-				category2Item.addItem("笑话" + i + 6, R.drawable.itemnoodd);
+				category2Item.addItem("笑话" + i, R.drawable.itemnoodd);
 			} else {
-				category2Item.addItem("笑话" + i + 6, R.drawable.itemodd);
+				category2Item.addItem("笑话" + i, R.drawable.itemodd);
 			}
 		}
+		
+		JokeCategory category3Item = new JokeCategory("校园系列");
+
+		for (int i = 0; i < 6; i++) {
+			if (i % 2 == 0) {
+				category3Item.addItem("笑话" + i, R.drawable.itemnoodd);
+			} else {
+				category3Item.addItem("笑话" + i, R.drawable.itemodd);
+			}
+		}
+		
 		allItems.add(categoryItem);
 		allItems.add(category2Item);
+		allItems.add(category3Item);
 
 		return allItems;
 	}

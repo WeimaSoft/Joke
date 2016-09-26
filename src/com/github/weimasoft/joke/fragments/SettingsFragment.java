@@ -15,4 +15,8 @@ public class SettingsFragment extends BaseFragment {
 		super(MainActivity.SETTINGS_FRAGMENT_INDEX, R.layout.fragment_settings, R.id.rdoSettings);
 	}
 	
+	@Override
+	public void initializeListAdapter() {
+		super.initializeListAdapter();
+	}
 }

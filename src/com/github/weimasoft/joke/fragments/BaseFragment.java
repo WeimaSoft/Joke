@@ -36,8 +36,11 @@ public class BaseFragment extends ListFragment {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
-		_adapter = new JokeListAdapter(TestJokeData.getTestData(getActivity().getResources()), getActivity());
+	}
+	
+	public void initializeListAdapter()
+	{
+		_adapter = new JokeListAdapter(TestJokeData.getTestData(), getActivity());
 		setListAdapter(_adapter);
 	}
 

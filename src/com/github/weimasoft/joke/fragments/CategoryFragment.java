@@ -9,4 +9,8 @@ public class CategoryFragment extends BaseFragment {
 		super(MainActivity.CATEGORY_FRAGMENT_INDEX, R.layout.fragment_category, R.id.rdoCategory);
 	}
 
+	@Override
+	public void initializeListAdapter() {
+		super.initializeListAdapter();
+	}
 }

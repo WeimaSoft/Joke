@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="height_navigator_layout">60dp</dimen>
+    <dimen name="height_navigator_layout">50dp</dimen>
 </resources>
