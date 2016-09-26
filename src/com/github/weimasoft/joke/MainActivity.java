@@ -15,9 +15,11 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.ListFragment;
 import android.support.v4.view.ViewPager;
+import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.RadioButton;
 
 public class MainActivity extends FragmentActivity {
 
@@ -44,6 +46,7 @@ public class MainActivity extends FragmentActivity {
 		_viewPager.setCurrentItem(index);
 	}
 
+	@SuppressWarnings("deprecation")
 	private void initialize() {
 		_fragments = new ArrayList<ListFragment>();
 		_fragments.add(new HomeFragment());
@@ -51,6 +54,34 @@ public class MainActivity extends FragmentActivity {
 		_fragments.add(new SettingsFragment());
 
 		_viewPager = (ViewPager) findViewById(R.id.viewpager);
+
+		_viewPager.setOnPageChangeListener(new OnPageChangeListener() {
+
+			@Override
+			public void onPageScrollStateChanged(int arg0) {
+				if (arg0 == 2) {
+					int currentIndex = _viewPager.getCurrentItem();
+					if (currentIndex == 0) {
+						RadioButton rdoHome = (RadioButton) findViewById(R.id.rdoHome);
+						rdoHome.setChecked(true);
+					} else if (currentIndex == 1) {
+						RadioButton rdoCategory = (RadioButton) findViewById(R.id.rdoCategory);
+						rdoCategory.setChecked(true);
+					} else {
+						RadioButton rdoSetting = (RadioButton) findViewById(R.id.rdoSettings);
+						rdoSetting.setChecked(true);
+					}
+				}
+			}
+
+			@Override
+			public void onPageScrolled(int arg0, float arg1, int arg2) {
+			}
+
+			@Override
+			public void onPageSelected(int arg0) {
+			}
+		});
 
 		_adapter = new ViewPagerAdapter(this.getSupportFragmentManager(), _fragments);
 		_viewPager.setAdapter(_adapter);

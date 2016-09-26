@@ -25,7 +25,6 @@ public class BaseFragment extends ListFragment {
 	private int _buttonId;
 	private MainActivity _parentActivity = null;
 	protected View view = null;
-	protected JokeListAdapter _adapter = null;
 
 	public BaseFragment(int fragmentIndex, int layoutId, int buttonId) {
 		_fragmentIndex = fragmentIndex;
@@ -35,12 +34,13 @@ public class BaseFragment extends ListFragment {
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
+		initializeListAdapter();
 		super.onCreate(savedInstanceState);
 	}
 	
 	public void initializeListAdapter()
 	{
-		_adapter = new JokeListAdapter(TestJokeData.getTestData(), getActivity());
+		JokeListAdapter _adapter = new JokeListAdapter(TestJokeData.getTestData(), getActivity());
 		setListAdapter(_adapter);
 	}
 
