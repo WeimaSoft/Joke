@@ -1,21 +1,19 @@
 package com.github.weimasoft.joke.list;
 
-import android.graphics.drawable.Drawable;
-
 public class JokeItem {
 	private String _title;
-	private Drawable _icon;
+	private int _icon;
 
-	public JokeItem(String title, Drawable icon) {
+	public JokeItem(String title, int drawable) {
 		this._title = title;
-		this._icon = icon;
+		this._icon = drawable;
 	}
 
 	public String getTitle() {
 		return _title;
 	}
 
-	public Drawable getIcon() {
+	public int getIcon() {
 		return _icon;
 	}
 }
