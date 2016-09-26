@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.ListFragment;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -26,7 +27,7 @@ public class MainActivity extends FragmentActivity {
 
 	private ViewPager _viewPager;
 	private ViewPagerAdapter _adapter;
-	private List<Fragment> _fragments = null;
+	private List<ListFragment> _fragments = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +45,7 @@ public class MainActivity extends FragmentActivity {
 	}
 
 	private void initialize() {
-		_fragments = new ArrayList<Fragment>();
+		_fragments = new ArrayList<ListFragment>();
 		_fragments.add(new HomeFragment());
 		_fragments.add(new CategoryFragment());
 		_fragments.add(new SettingsFragment());
